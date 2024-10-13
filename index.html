@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Invitación al Cine de Amor</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<h1>Invitación al Cine a la personita muy especial en mi vida</h1>
+		<p>Querido/a <span id="name"></span>,</p>
+		<p>Me encantaría invitarte a una noche romántica en el cine.</p>
+		<p>La película es "LA SUSTANCIA " y la función es hoy domingo a las 9 pm.</p>
+		<p>¿Quieres acompañarme?</p>
+		<button id="accept-button">Aceptar</button>
+		<div id="response"></div>
+	</div>
+
+	<script>
+		const nameInput = prompt("¿Cuál es tu nombre?");
+		document.getElementById("name").innerHTML = nameInput;
+
+		document.getElementById("accept-button").addEventListener("click", function() {
+			const responseDiv = document.getElementById("response");
+			responseDiv.innerHTML = "¡Me encanta! Estoy emocionado de verte en el cine.";
+		});
+	</script>
+</body>
+</html>
